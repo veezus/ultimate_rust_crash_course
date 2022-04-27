@@ -20,11 +20,11 @@ fn main() {
         // - If arg is "double", then call the double() function
         // - If arg is anything else, then call the count() function, passing "arg" to it.
         if arg == "sum" {
-            sum()
+            sum();
         } else if arg == "double" {
-            double()
+            double();
         } else {
-            count(arg)
+            count(arg);
         }
 
         // 1b. Now try passing "sum", "double" and "bananas" to the program by adding your argument
@@ -39,7 +39,7 @@ fn sum() {
     // Run it with `cargo run sum`
 
     for count in 7..=23 {
-        sum = sum + count
+        sum += count;
     }
 
     println!("The sum is {}", sum);
@@ -53,7 +53,7 @@ fn double() {
     // with `cargo run double`  Hint: The answer is 9 times.
 
     while x <= 500 {
-        x = x * 2;
+        x *= 2;
         count = count + 1;
     }
 
@@ -71,7 +71,7 @@ fn count(arg: String) {
     loop {
         print!("{} ", arg);
         if count == 8 { break }
-        count = count + 1;
+        count += 1;
     }
 
     println!(); // This will output just a newline at the end for cleanliness.
